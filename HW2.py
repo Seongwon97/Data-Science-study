@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
+import sklearn.linear_model as lm
 
 df = pd.read_excel('C:/python_file/bmi_data_phw3.xlsx','dataset', index_col=None)
 
