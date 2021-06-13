@@ -25,6 +25,7 @@ def entropy(target):
     return entropy
 
 
+
 #Function to receive information gain
 def Gain(data,split_attribute, target):
     # Calculate root entropy
