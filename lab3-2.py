@@ -8,6 +8,7 @@ import sklearn.linear_model as lm
 
 df = pd.read_csv('C:/python_file/bmi_data_lab3_1.csv')
 
+
 #-----------------------------------------------------------------------------------------------------
 df2 = pd.DataFrame(
     {'Height (Inches)' : df['Height (Inches)'],
@@ -26,6 +27,7 @@ ax2.set_title('After Standard Scaler')
 sns.kdeplot(scaled_df ['Height (Inches)'], ax=ax2)
 sns.kdeplot(scaled_df ['Weight (Pounds)'], ax=ax2)
 plt.show()
+
 
 #-----------------------------------------------------------------------------------------------------
 df2 = pd.DataFrame(
