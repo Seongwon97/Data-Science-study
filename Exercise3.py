@@ -17,9 +17,11 @@ print(covMatrix)
 sn.heatmap(covMatrix, annot=True, fmt='g')
 plt.show()
 
+
 print("\nSample data")
 covMatrix=np.cov(data,bias=False)
 print(covMatrix)
+
 
 sn.heatmap(covMatrix, annot=True, fmt='g')
 plt.show()
