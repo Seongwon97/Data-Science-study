@@ -20,6 +20,7 @@ Weight = np.array(df_male['Weight (Pounds)'])
 weight_nan = []
 height_nan = []
 
+
 for i in range(0, len(Height)):
     if np.isnan(Height[i]):
         weight_nan.append(Weight[i])
