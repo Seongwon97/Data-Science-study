@@ -15,6 +15,7 @@ df_w=df.loc[df['Sex']=="Female"].copy()
 arr=np.array(range(0,len(df_w)))
 df_w.index=arr
 
+
 #Linear Regression with male data
 height_m=np.array(df_m["Height (Inches)"])
 weight_m=np.array(df_m["Weight (Pounds)"])
