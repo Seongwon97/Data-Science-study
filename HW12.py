@@ -15,6 +15,7 @@ def bubble_sort(arr):
                 arr[1][j], arr[1][j + 1] = arr[1][j + 1], arr[1][j]
 
 
+
 def decision_split_value(arr):
     bubble_sort(arr)
     min_gini=1
