@@ -14,6 +14,7 @@ covMatrix=np.cov(data,bias=True)
 print(covMatrix)
 
 
+
 print("\nsample covariance matrix (N-1)")
 covMatrix=np.cov(data,bias=False)
 print(covMatrix)
