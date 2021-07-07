@@ -14,6 +14,7 @@ predictor_attribute = ["District","House Type","Previous Customer"]
 target_attribute= ["Outcome"]
 
 
+
 #entropy calculation function
 def entropy(target):
     elements, count = np.unique(target, return_counts = True)
