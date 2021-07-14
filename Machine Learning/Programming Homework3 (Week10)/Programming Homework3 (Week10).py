@@ -17,6 +17,7 @@ print("Internal value by column")
 for i in df.columns:
     print(i, ':', df[i].unique())
 
+
 # data cleaning
 df.replace('?', np.nan, inplace=True)
 df.fillna(axis=0, method='ffill', inplace=True)
