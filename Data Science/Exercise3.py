@@ -8,6 +8,7 @@ C=[50,800,20,1]
 D=[60,600,20,2]
 E=[40,300,20,5]
 
+
 data= np.array([A,B,C,D,E])
 
 print("\nPopulation data")
