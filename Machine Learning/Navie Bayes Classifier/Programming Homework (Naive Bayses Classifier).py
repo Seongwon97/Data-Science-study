@@ -6,6 +6,7 @@ ache = ['Y', 'N', 'N', 'N', 'Y', 'N', 'N', 'N','Y', 'N', 'N', 'N','Y', 'N', 'N',
 swell = ['Y', 'N', 'Y', 'N', 'Y', 'N', 'Y', 'N', 'Y', 'N', 'Y', 'Y', 'N', 'Y', 'N', 'N', 'N', 'Y', 'N','Y', 'N', 'Y', 'N', 'Y', 'Y', 'N', 'Y', 'N','Y', 'N']
 headache = ['N', 'N', 'Y', 'Y', 'N', 'Y', 'Y', 'N', 'N', 'N', 'Y', 'Y', 'N', 'Y', 'N', 'N', 'Y', 'N', 'Y', 'Y', 'N', 'N', 'Y', 'Y', 'N', 'N', 'Y', 'Y', 'N', 'N']
 
+
 # Import LabelEncoder
 from sklearn import preprocessing
 
