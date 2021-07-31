@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
+
 text = ['fake news corona vaccine',
     'WHO is gathering the latest international multilingual scientific findings and knowledge on COVID-19. The global literature cited in the WHO COVID-19 database is updated daily (Monday through Friday) from searches of bibliographic databases, hand searching, and the addition of other expert-referred scientific articles. This database represents a comprehensive multilingual source of current literature on the topic. While it may not be exhaustive, new research is added regularly.',
     'A COVID-19 vaccine candidate made of tiny artificial particles could be more powerful than other leading varieties at triggering a protective immune response. When the team injected mice with the nanoparticle vaccine, the animals produced virus-blocking antibodies at levels comparable to or greater than those produced by people who had recovered from COVID-19. Mice that received the vaccine produced about ten times more of these antibodies than did rodents vaccinated only with the spike protein, on which many COVID-19 vaccine candidates rely.',
@@ -9,9 +10,11 @@ text = ['fake news corona vaccine',
     '“Falsehood flies, and the Truth comes limping after it,” Jonathan Swift once wrote. It was hyperbole three centuries ago. But it is a factual description of social media, according to an ambitious and first-of-its-kind study published Thursday in Science. The massive new study analyzes every major contested news story in English across the span of Twitter’s existence—some 126,000 stories, tweeted by 3 million users, over more than 10 years—and finds that the truth simply cannot compete with hoax and rumor. By every common metric, falsehood consistently dominates the truth on Twitter, the study finds: Fake news and false rumors reach more people, penetrate deeper into the social network, and spread much faster than accurate stories.',
     'The anti-vaccination movement has gained traction online in recent years, and campaigners opposed to vaccination have moved their focus to making claims relating to the coronavirus. First, a video containing inaccurate claims about coronavirus vaccine trials, made by osteopath Carrie Madej, that has proved popular on social media. Carrie Madej\'s video makes a false claim that the vaccines will change recipients\' DNA (which carries genetic information). "The Covid-19 vaccines are designed to make us into genetically modified organisms." She also claims - without any evidence - that vaccines will "hook us all up to an artificial intelligence interface".']
 
+
 tfidf = TfidfVectorizer(stop_words='english')
 tfidf_matrix = tfidf.fit_transform(text)
 print("{} words use to represent {} query and document.".format(tfidf_matrix.shape[0], tfidf_matrix.shape[1]))
+
 
 cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 
@@ -19,6 +22,7 @@ result_cosine_sim = pd.DataFrame(cosine_sim, columns = ['Query', 'Document1', 'D
                       index = ['Query', 'Document1', 'Document2', 'Document3', 'Document4', 'Document5'])
 print("\nResult of Cosine Similarity")
 print(result_cosine_sim)
+
 
 result = result_cosine_sim.iloc[1:, 0]
 print("\nRank List")
